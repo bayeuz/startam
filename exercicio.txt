@@ -1,0 +1,46 @@
+1-Quais são os 3 V’s do Big Data? Explique
+Velocidade: Relativo a velocidade com que novos dados sao gerados  e a velocidade em que eles trafegam
+Variedade: Se refere aos diferentes tipos de dados que  podem ser ultilizados em big data
+Volume: Se refere a grande quantidade de dados que sera armazenado na base de dados
+
+2-Quais são as quatro camadas tecnológicas de Big Data? 
+1-Camada de Armazenamento e Infraestrutura 
+2-Camada de acesso aos dados (SQL e NoSQL)
+3-Ferramentas de análise e visualização
+4-Camada de regras de negócios
+
+As 4 Camadas do Fluxo de Dados
+Camada de Fonte de Dados
+Camada de Armazenamento de Dados
+Camada de Processamento / Análise de Dados
+Camada de Saída de Dados
+
+3-Como os bancos NoSQL se encaixam dentro do contexto de Big Data, e como contribuem
+para o desenvolvimento de aplicações?
+Bancos NoSQL podem ter sua linguagem específica para consulta, mas
+muitos possuem drivers nas linguagens de desenvolvimento de software
+(C#, Java, Python) que conectam diretamente ao banco, com pouca
+configuração necessária
+4 – Quais são os quatro tipos de bancos de dados NoSQL? Qual é a estrutura usada por cada um
+deles para armazenar os dados?
+-Estrutura Chave-Valor (Key-ValueStore):As informações são inseridas como entradas parecidas com um
+dicionário, possuindo uma chave e um valor
+– Estrutura Colunar (Column Store):Armazenam as informações organizadas como colunas de uma grande
+tabela
+– Estrutura por documentos (DocumentStore):Bancos de dados colunares não permitem a construção de sub-colunas
+– Estrutura em grafo (Graph Store): Modelagem de dados que difere das abordagens baseadas em
+chave-valor por estar focada na relação entre os dados
+5 – Escreva as chamadas do cliente do MongoDB para
+a) Criar um banco de dados e uma coleção
+database: use "Nome da database"
+coleção:db.createCollection(<nome>, <opções>)
+b)Inserir um documento em uma coleção no MongoDB
+db.idades.insert({nome:"João", idade: 28})
+c)Encontrar documentos em uma coleção do MongoDB, escolhendo um dos campos para
+ordenação em ordem crescente / decrescente
+db.unicorns.find().sort ({ name: 1, vampires: -1})
+d) Atualizar documentos em uma coleção, inserindo ou modificando o valor de um campo
+Atualiza:db.unicorns.update ({ name: 'Roooooodles '},
+{$set: {weight: 590}})
+Acrescenta:db.unicorns.update ({ name: 'Aurora '},
+{$push: {loves: 'sugar '}})
